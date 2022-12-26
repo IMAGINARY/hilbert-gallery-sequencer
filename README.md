@@ -80,6 +80,10 @@ To generate random API keys, you can use the following command:
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
+## Architecture
+
+See [ARCHITECTURE.md](ARCHITECTURE.md).
+
 ## Credits
 
 Developed by Eric Londaits <eric.londaits@imaginary.org> for IMAGINARY gGmbH.
