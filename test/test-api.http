@@ -1,0 +1,18 @@
+### GET status
+GET http://localhost:4123/status
+Accept: application/json
+x-api-key: {{API_KEY}}
+
+### POST stop
+POST http://localhost:4123/stop
+Content-Type: application/json
+x-api-key: {{API_KEY}}
+
+{}
+
+### POST start
+POST http://localhost:4123/start
+Content-Type: application/json
+x-api-key: {{API_KEY}}
+
+< data/timeline-1.json

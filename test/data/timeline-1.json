@@ -1,0 +1,180 @@
+{
+  "1": [
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "image/jpeg",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8745ed2f8f73bb5db09394bab9fc17a8ca228c2/6.jpg",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    },
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "image/jpeg",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--820b7f0814e2f2449680baaa06a1039bcab38660/3.jpg",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    }
+  ],
+  "2": [
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "image/jpeg",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d10a58d999e4cd252720ef936d224c7b4d68b027/4.jpg",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    },
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "image/jpeg",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1fc5849397a53a82e22f54490b08eaca0e6f02ce/2.jpg",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    }
+  ],
+  "3": [
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "image/jpeg",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f519d8ed00d766479faf4f8fdfd05f6ab942140/1.jpg",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    },
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "image/jpeg",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3b73a859027a6cf0cf1c2fc034d0d7bffe19fc9/5.jpg",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    }
+  ],
+  "4": [
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "video/mp4",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebae7f528b5bc85765eca3a05212e2a8a1277e32/v1.mp4",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    },
+    {
+      "action": "show",
+      "args": {
+        "mimetype": "video/mp4",
+        "url": "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9c8692f88f768e0ba5cbbd827cc3c1f636391c11/v2.mp4",
+        "fit": "contain",
+        "color": "black",
+        "transition": {
+          "type": "fade",
+          "options": {
+            "duration": 1,
+            "color": "black"
+          }
+        },
+        "animation": {
+          "type": "none",
+          "options": {}
+        },
+        "duration": "7.5"
+      }
+    }
+  ],
+  "5": [],
+  "6": []
+}
