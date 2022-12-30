@@ -36,10 +36,11 @@ app.post('/stop', async (req, res) => {
   res.status(200).send(sequencer.status());
 });
 
-app.post('/start', async (req, res) => {
-  console.log('Received start request');
+app.post('/start/:timelineId', async (req, res) => {
+  const { timelineId } = req.params;
+  console.log(`Received start request for timeline ${timelineId}`);
 
-  sequencer.play(req.body);
+  await sequencer.start(timelineId);
   res.status(200).send(sequencer.status());
 });
 

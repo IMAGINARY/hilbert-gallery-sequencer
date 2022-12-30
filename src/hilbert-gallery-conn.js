@@ -9,8 +9,12 @@ async function getStations() {
   return axios.get(`${HILBERT_GALLERY_API_URL}/api/v1/stations`);
 }
 
+async function getPlaylist(id) {
+  const response = await axios.get(`${HILBERT_GALLERY_API_URL}/api/v1/timelines/${id}/playlist`);
+  return response.data;
+}
+
 async function viewerSend(stationId, message) {
-  console.log('sending', message);
   return axios.patch(`${HILBERT_GALLERY_API_URL}/api/v1/display/${stationId}/update`, {
     message,
   }, {
@@ -21,7 +25,6 @@ async function viewerSend(stationId, message) {
 }
 
 async function clear(stationId) {
-  console.log(`Clearing station ${stationId}`);
   return viewerSend(stationId, {
     action: 'clear',
     args: {
@@ -60,7 +63,6 @@ async function show(stationId, exhibit, userOptions = {}) {
 }
 
 async function preload(stationId, playlist) {
-  console.log('Preloading', playlist);
   return viewerSend(stationId, {
     action: 'preload',
     args: playlist.map(item => ({
@@ -72,6 +74,7 @@ async function preload(stationId, playlist) {
 
 module.exports = {
   getStations,
+  getPlaylist,
   viewerSend,
   clear,
   preload,

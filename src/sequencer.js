@@ -1,9 +1,10 @@
 const EventEmitter = require('events');
-const ViewerConn = require('./viewer-conn');
+const HilbertGallery = require('./hilbert-gallery-conn');
 
 class Sequencer {
   constructor() {
     this.isPlaying = false;
+    this.timelineId = null;
     this.playlist = null;
     this.heads = [];
     this.timeout = null;
@@ -14,6 +15,7 @@ class Sequencer {
   status() {
     return {
       isPlaying: this.isPlaying,
+      timelineId: this.timelineId,
     };
   }
 
@@ -21,8 +23,9 @@ class Sequencer {
     if (this.isPlaying) {
       const allStations = Object.keys(this.playlist);
 
-      this.events.emit('stop');
+      this.events.emit('stop', this.timelineId);
       this.isPlaying = false;
+      this.timelineId = null;
       clearTimeout(this.timeout);
       this.timeout = null;
       this.playlist = null;
@@ -30,7 +33,7 @@ class Sequencer {
       this.delays = [];
       this.lastDelay = 0;
 
-      return Promise.all(allStations.map(stationId => ViewerConn.clear(stationId)));
+      return Promise.all(allStations.map(stationId => HilbertGallery.clear(stationId)));
     }
     return Promise.resolve();
   }
@@ -44,7 +47,7 @@ class Sequencer {
       // Show all images with no delay
       Object.entries(this.delays).forEach(([stationId, delay]) => {
         if (delay <= 0.1) {
-          ViewerConn.viewerSend(stationId, this.playlist[stationId][this.heads[stationId]]);
+          HilbertGallery.viewerSend(stationId, this.playlist[stationId][this.heads[stationId]]);
           this.delays[stationId] = this.playlist[stationId][this.heads[stationId]]
             .args.duration * 1000;
           // Cue the next picture
@@ -61,12 +64,15 @@ class Sequencer {
     }
   }
 
-  play(playlist) {
+  async start(timelineId) {
+    const playlist = await HilbertGallery.getPlaylist(timelineId);
+
     if (this.isPlaying) {
       this.stop();
     }
-    this.events.emit('play');
+    this.events.emit('play', timelineId);
     this.isPlaying = true;
+    this.timelineId = timelineId;
     this.playlist = playlist;
     const allStations = Object.keys(this.playlist);
     const activeStations = allStations
@@ -78,9 +84,9 @@ class Sequencer {
       activeStations.map(stationId => [stationId, 0])
     );
 
-    return Promise.all(allStations.map(stationId => ViewerConn.clear(stationId)))
+    return Promise.all(allStations.map(stationId => HilbertGallery.clear(stationId)))
       .then(() => Promise.all(
-        activeStations.map(stationId => ViewerConn.preload(stationId, playlist[stationId]))
+        activeStations.map(stationId => HilbertGallery.preload(stationId, playlist[stationId]))
       ))
       .then(() => {
         this.stepWithTimer();
@@ -89,7 +95,7 @@ class Sequencer {
 
   updateDisplay(stationId, message) {
     return this.stop()
-      .then(() => ViewerConn.viewerSend(stationId, message));
+      .then(() => HilbertGallery.viewerSend(stationId, message));
   }
 }
 
