@@ -86,6 +86,11 @@ class Sequencer {
         this.stepWithTimer();
       });
   }
+
+  updateDisplay(stationId, message) {
+    return this.stop()
+      .then(() => ViewerConn.viewerSend(stationId, message));
+  }
 }
 
 module.exports = Sequencer;

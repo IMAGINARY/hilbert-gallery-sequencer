@@ -43,6 +43,13 @@ app.post('/start', async (req, res) => {
   res.status(200).send(sequencer.status());
 });
 
+app.post('/display/:stationId/update', async (req, res) => {
+  console.log('Received update request for station', req.params.stationId);
+
+  sequencer.updateDisplay(req.params.stationId, req.body);
+  res.status(200).send(sequencer.status());
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
